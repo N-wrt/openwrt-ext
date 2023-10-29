@@ -1,0 +1,20 @@
+--- a/build/gen.py
++++ b/build/gen.py
+@@ -445,7 +445,7 @@ def WriteGNNinja(path, platform, host, o
+         '-Wextra',
+         '-Wno-unused-parameter',
+ 
+-        '-Wextra-semi',
++        '-Wextra',
+         '-Wundef',
+ 
+         '-std=c++17'
+@@ -453,7 +453,7 @@ def WriteGNNinja(path, platform, host, o
+ 
+     # flags not supported by gcc/g++.
+     if cxx == 'clang++':
+-      cflags.extend(['-Wrange-loop-analysis', '-Wextra-semi-stmt'])
++      cflags.extend(['-Wrange-loop-analysis', '-Wextra'])
+ 
+     if platform.is_linux() or platform.is_mingw() or platform.is_msys():
+       ldflags.append('-Wl,--as-needed')
