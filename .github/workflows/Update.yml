@@ -104,6 +104,8 @@ jobs:
         
         git clone https://github.com/xiaorouji/openwrt-passwall-packages ./patch/wall
         rm -rf ./patch/wall/.github
+        rm -rf ./patch/wall/gn
+        rm -rf ./patch/wall/naiveproxy
         svn export https://github.com/fw876/helloworld/trunk/redsocks2 ./patch/wall/redsocks2
         svn export https://github.com/fw876/helloworld/trunk/lua-neturl ./patch/wall/lua-neturl
         svn export https://github.com/fw876/helloworld/trunk/shadow-tls ./patch/wall/shadow-tls
