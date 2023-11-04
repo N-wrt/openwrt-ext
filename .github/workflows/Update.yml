@@ -44,8 +44,7 @@ jobs:
         rm -rf ./lisaac/*  
         rm -rf ./linkease/iStore
         rm -rf ./linkease/nas-packages-luci
-        rm -rf ./linkease/nas-packages    
-        rm -rf ./jerrykuku/*
+        rm -rf ./linkease/nas-packages
         rm -rf ./op-oaf
         rm -rf ./op-fileBrowser/*
         rm -rf ./op-aliyun/*
@@ -81,12 +80,6 @@ jobs:
         svn export https://github.com/linkease/nas-packages/trunk/multimedia/ffmpeg-remux ./linkease/nas-packages/ffmpeg-remux    
         svn export https://github.com/linkease/istore/trunk/luci ./linkease/iStore
         svn export https://github.com/linkease/istore-ui/trunk/app-store-ui ./linkease/iStore/app-store-ui
- 
-             
-        git clone https://github.com/jerrykuku/luci-app-vssr ./jerrykuku/luci-app-vssr
-        git clone https://github.com/jerrykuku/lua-maxminddb ./jerrykuku/lua-maxminddb
-        git clone https://github.com/jerrykuku/go-aliyundrive-webdav ./jerrykuku/go-aliyundrive-webdav
-        git clone https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav ./jerrykuku/luci-app-go-aliyundrive-webdav
 
 
         git clone https://github.com/destan19/OpenAppFilter ./op-oaf
