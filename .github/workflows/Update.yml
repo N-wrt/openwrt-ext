@@ -26,7 +26,7 @@ jobs:
         sudo timedatectl set-timezone "Asia/Shanghai"
 
     - name: Delete workflow runs
-      uses: xiangfeidexiaohuo/delete-workflow-runs@main
+      uses: Mattraks/delete-workflow-runs@main
       continue-on-error: true
       with:
         retain_days: 1
@@ -53,7 +53,6 @@ jobs:
         rm -rf ./patch/wall-luci/luci-app-ssr-plus
         rm -rf ./patch/wall-luci/luci-app-openclash
         rm -rf ./op-smartdns/luci-app-smartdns
-        rm -rf ./theme/luci-theme-argon-18.06
         rm -rf ./theme/luci-theme-argon
         rm -rf ./luci-app-oled
         rm -rf ./op-go-aliyundrive/*
@@ -158,14 +157,10 @@ jobs:
 
 
         git clone https://github.com/jerrykuku/luci-theme-argon ./theme/luci-theme-argon
-        git clone https://github.com/jerrykuku/luci-theme-argon -b 18.06 ./theme/luci-theme-argon-18.06     
         rm -rf ./theme/luci-theme-argon/.github
         rm -rf ./theme/luci-theme-argon/.gitignore
-        rm -rf ./theme/luci-theme-argon-18.06/.github
-        rm -rf ./theme/luci-theme-argon-18.06/.gitignore
         rm -rf ./theme/luci-theme-argon/README*
         rm -rf ./theme/luci-theme-argon/RELEASE*
-        rm -rf ./theme/luci-theme-argon-18.06/README*
         
         git clone https://github.com/unifreq/luci-app-oled ./oled
         mv ./oled/luci-app-oled ./
