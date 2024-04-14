@@ -118,6 +118,10 @@ jobs:
         mv ./patch/wall-luci/pass2/luci-app-passwall2 ./patch/wall-luci/
         rm -rf ./patch/wall-luci/pass
         rm -rf ./patch/wall-luci/pass2
+      
+        git clone --depth=1 https://github.com/vernesong/OpenClash.git -b dev
+        mv ./OpenClash/luci-app-openclash ./patch/wall-luci/
+        rm -rf ./OpenClash
         
         ##芝麻开门
         mv ./patch/wall-luci/luci-app-openclash/luasrc/controller/openclash.lua ./patch/wall-luci/luci-app-openclash/luasrc/controller/openclash.lua.gfw
@@ -126,11 +130,6 @@ jobs:
         mv ./patch/wall-luci/luci-app-passwall2/luasrc/controller/passwall2.lua ./patch/wall-luci/luci-app-passwall2/luasrc/controller/passwall2.lua.gfw
         mv ./patch/wall-luci/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua ./patch/wall-luci/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua.gfw
         mv ./patch/wall-luci/luci-app-vssr/luasrc/controller/vssr.lua ./patch/wall-luci/luci-app-vssr/luasrc/controller/vssr.lua.gfw
-        
-        
-        git clone --depth=1 https://github.com/vernesong/OpenClash.git -b dev
-        mv ./OpenClash/luci-app-openclash ./patch/wall-luci/
-        rm -rf ./OpenClash
 
         git clone https://github.com/sbwml/luci-app-mosdns ./op-mosdns
         git clone https://github.com/sbwml/v2ray-geodata ./op-mosdns/v2ray-geodata
