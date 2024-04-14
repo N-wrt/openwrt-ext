@@ -141,6 +141,7 @@ jobs:
         git clone https://github.com/sirpdboy/luci-app-lucky ./op-lucky/
         rm -rf ./op-lucky/README.md
         rm -rf ./op-ddnsgo/README.md
+        rm -rf ./op-ddnsgo/.github
 
        
         git clone https://github.com/pymumu/luci-app-smartdns -b lede ./op-smartdns/luci-app-smartdns
