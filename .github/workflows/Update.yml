@@ -128,7 +128,7 @@ jobs:
         mv ./patch/wall-luci/luci-app-passwall/luasrc/controller/passwall.lua ./patch/wall-luci/luci-app-passwall/luasrc/controller/passwall.lua.gfw
         mv ./patch/wall-luci/luci-app-passwall2/luasrc/controller/passwall2.lua ./patch/wall-luci/luci-app-passwall2/luasrc/controller/passwall2.lua.gfw
         mv ./patch/wall-luci/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua ./patch/wall-luci/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua.gfw
-        mv ./patch/wall-luci/luci-app-vssr/luasrc/controller/vssr.lua ./patch/wall-luci/luci-app-vssr/luasrc/controller/vssr.lua.gfw
+        # mv ./patch/wall-luci/luci-app-vssr/luasrc/controller/vssr.lua ./patch/wall-luci/luci-app-vssr/luasrc/controller/vssr.lua.gfw
 
         git clone https://github.com/sbwml/luci-app-mosdns ./op-mosdns
         git clone https://github.com/sbwml/v2ray-geodata ./op-mosdns/v2ray-geodata
