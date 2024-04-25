@@ -124,7 +124,7 @@ jobs:
         
         ##芝麻开门
         mv ./patch/wall-luci/luci-app-openclash/luasrc/controller/openclash.lua ./patch/wall-luci/luci-app-openclash/luasrc/controller/openclash.lua.gfw
-        mv ./patch/wall-luci/luci-app-bypass/luasrc/controller/bypass.lua ./patch/wall-luci/luci-app-bypass/luasrc/controller/bypass.lua.gfw
+        # mv ./patch/wall-luci/luci-app-bypass/luasrc/controller/bypass.lua ./patch/wall-luci/luci-app-bypass/luasrc/controller/bypass.lua.gfw
         mv ./patch/wall-luci/luci-app-passwall/luasrc/controller/passwall.lua ./patch/wall-luci/luci-app-passwall/luasrc/controller/passwall.lua.gfw
         mv ./patch/wall-luci/luci-app-passwall2/luasrc/controller/passwall2.lua ./patch/wall-luci/luci-app-passwall2/luasrc/controller/passwall2.lua.gfw
         mv ./patch/wall-luci/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua ./patch/wall-luci/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua.gfw
