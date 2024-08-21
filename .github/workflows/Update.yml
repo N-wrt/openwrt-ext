@@ -46,6 +46,7 @@ jobs:
         rm -rf ./op-alist/*
         rm -rf ./op-ddnsgo/*
         rm -rf ./op-lucky/*
+        rm -rf ./patch/op-mihomo/*        
         # rm -rf ./op-xunlei/*
         rm -rf ./patch/wall/*
         rm -rf ./patch/wall-luci/luci-app-passwall
@@ -129,6 +130,11 @@ jobs:
         mv ./patch/wall-luci/luci-app-passwall2/luasrc/controller/passwall2.lua ./patch/wall-luci/luci-app-passwall2/luasrc/controller/passwall2.lua.gfw
         mv ./patch/wall-luci/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua ./patch/wall-luci/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua.gfw
         # mv ./patch/wall-luci/luci-app-vssr/luasrc/controller/vssr.lua ./patch/wall-luci/luci-app-vssr/luasrc/controller/vssr.lua.gfw
+
+        git clone https://github.com/morytyann/OpenWrt-mihomo ./patch/op-mihomo/tmp
+        mv ./patch/op-mihomo/tmp/luci-app-mihomo ./patch/op-mihomo/
+        mv ./patch/op-mihomo/tmp/mihomo ./patch/op-mihomo/
+        rm -rf ./patch/op-mihomo/tmp
 
         git clone https://github.com/sbwml/luci-app-mosdns ./op-mosdns
         git clone https://github.com/sbwml/v2ray-geodata ./op-mosdns/v2ray-geodata
