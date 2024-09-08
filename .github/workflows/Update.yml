@@ -46,13 +46,15 @@ jobs:
         rm -rf ./op-alist/*
         rm -rf ./op-ddnsgo/*
         rm -rf ./op-lucky/*
-        rm -rf ./patch/op-mihomo/*        
         # rm -rf ./op-xunlei/*
         rm -rf ./patch/wall/*
         rm -rf ./patch/wall-luci/luci-app-passwall
         rm -rf ./patch/wall-luci/luci-app-passwall2
         rm -rf ./patch/wall-luci/luci-app-ssr-plus
         rm -rf ./patch/wall-luci/luci-app-openclash
+        rm -rf ./patch/wall-luci/luci-app-mihomo
+        rm -rf ./patch/wall-luci/mihomo
+        rm -rf ./patch/wall-luci/luci-app-homeproxy
         rm -rf ./op-smartdns/luci-app-smartdns
         rm -rf ./theme/luci-theme-argon
         rm -rf ./luci-app-oled
@@ -131,10 +133,14 @@ jobs:
         mv ./patch/wall-luci/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua ./patch/wall-luci/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua.gfw
         # mv ./patch/wall-luci/luci-app-vssr/luasrc/controller/vssr.lua ./patch/wall-luci/luci-app-vssr/luasrc/controller/vssr.lua.gfw
 
-        git clone https://github.com/morytyann/OpenWrt-mihomo ./patch/op-mihomo/tmp
-        mv ./patch/op-mihomo/tmp/luci-app-mihomo ./patch/op-mihomo/
-        mv ./patch/op-mihomo/tmp/mihomo ./patch/op-mihomo/
-        rm -rf ./patch/op-mihomo/tmp
+        git clone https://github.com/morytyann/OpenWrt-mihomo ./patch/wall-luci/tmp
+        mv ./patch/wall-luci/tmp/luci-app-mihomo ./patch/wall-luci/
+        mv ./patch/wall-luci/tmp/mihomo ./patch/wall-luci/
+        rm -rf ./patch/wall-luci/tmp
+        
+        git clone https://github.com/immortalwrt/homeproxy ./patch/wall-luci/luci-app-homeproxy
+        rm -rf ./patch/wall-luci/luci-app-homeproxy/.github
+        rm -rf ./patch/wall-luci/luci-app-homeproxy/.git
 
         git clone https://github.com/sbwml/luci-app-mosdns ./op-mosdns
         git clone https://github.com/sbwml/v2ray-geodata ./op-mosdns/v2ray-geodata
